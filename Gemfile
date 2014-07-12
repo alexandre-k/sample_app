@@ -5,6 +5,8 @@ ruby '2.0.0'
 gem 'rails'
 gem 'bootstrap-sass'
 gem 'sprockets'
+gem 'bcrypt'
+gem 'devise'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
