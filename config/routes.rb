@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  get 'users/new'
 
-  get 'static_pages/help'
+  root 'static_pages#home'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/about', to: 'static_pages#about', via: 'get'
+  match '/', to: 'static_pages#home', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
 
-  get 'static_pages/about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -17,7 +21,8 @@ Rails.application.routes.draw do
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
+  # Example resource rutocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
+#:set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commandsoute (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
   # Example resource route with options:
